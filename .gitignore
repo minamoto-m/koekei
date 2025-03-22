@@ -1,0 +1,13 @@
+node_modules/
+.env
+.DS_Store
+
+/backend/bin/
+/backend/*.db
+/backend/.air.toml
+
+/frontend/.next/
+/frontend/out/
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.production.local
