@@ -1,16 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/minamoto-m/koekei/controllers"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "トップ画面へようこそ！")
-}
-
 func main() {
-	http.HandleFunc("/", handler)
-	fmt.Println("サーバーがポート8080で起動しました...")
+	http.HandleFunc("/income-expenses", controllers.GetIncomeExpenses)
 	http.ListenAndServe(":8080", nil)
 }
