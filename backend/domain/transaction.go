@@ -15,7 +15,7 @@ type Transaction struct {
 
 type ITransactionRepository interface {
 	GetAllByDate(date time.Time) ([]*Transaction, error)
-	// Create(transaction *Transaction) error
+	Create(transaction *Transaction) error
 	// Update(transaction *Transaction) error
 	// Delete(id int) error
 }

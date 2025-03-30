@@ -15,6 +15,7 @@ func main() {
 	r := gin.Default()
 
 	r.GET("/transactions/:date", h.GetAllByDate)
+	r.POST("/transactions", h.CreateTransaction)
 
 	r.Run(":8080")
 }
