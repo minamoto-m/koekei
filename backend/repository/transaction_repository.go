@@ -30,6 +30,12 @@ func (r *InMemoryTransactionRepository) GetAllByDate(date time.Time) ([]*domain.
 	return result, nil
 }
 
+func (r *InMemoryTransactionRepository) GetAll() ([]*domain.Transaction, error) {
+	r.mu.Lock()
+	defer r.mu.Unlock()
+	return r.transactions, nil
+}
+
 func (r *InMemoryTransactionRepository) Create(transaction *domain.Transaction) error {
 	r.mu.Lock()
 	defer r.mu.Unlock()

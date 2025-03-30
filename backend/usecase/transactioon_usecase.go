@@ -18,6 +18,10 @@ func (u *TransactionUsecase) GetAllByDate(date time.Time) ([]*domain.Transaction
 	return u.Repo.GetAllByDate(date)
 }
 
+func (u *TransactionUsecase) GetAll() ([]*domain.Transaction, error) {
+	return u.Repo.GetAll()
+}
+
 func (u *TransactionUsecase) Create(transaction *domain.Transaction) error {
 	return u.Repo.Create(transaction)
 }
