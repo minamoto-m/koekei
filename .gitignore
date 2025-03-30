@@ -7,7 +7,7 @@ node_modules/
 /backend/bin/
 /backend/*.db
 /backend/.air.toml
-/backend/tmp/
+/backend/**/tmp/
 
 /frontend/.next/
 /frontend/out/
